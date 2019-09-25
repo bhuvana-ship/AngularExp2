@@ -1,0 +1,9 @@
+<div class="signin-container h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+   <div class="form1 bg-danger w-25 h-25">
+        <label for="">Name </label>
+        <input type="text" [formControl]="name" placeholder="Enter your name" /> <br>
+        <label for="">Password </label>
+        <input type="password" [formControl]="password" placeholder="Enter your password" /> <br>
+        <button type="submit" (click)="updateName()">submit</button>
+    </div>
+</div>

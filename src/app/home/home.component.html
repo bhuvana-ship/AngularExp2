@@ -1,0 +1,12 @@
+
+<div class="home-container d-flex flex-row h-100 w-100">
+    <div class="left-content flex-fill d-flex flex-column justify-content-left align-items-left mt-2">
+        <h1>Bhuvana-BioData</h1>
+        <h6 *ngFor="let i of result">My Name is: {{i.name}}</h6>
+        <h6 *ngFor="let i of result">My Qualification is : {{i.qualification}}</h6>
+        <h6 *ngFor="let i of result">My Father Name : {{i.fathername}}</h6>
+    </div>
+    <div class="right-image flex-fill mt-2">
+        <img class="rounded-circle" src="{{myProfileImage}}" alt="BhuvanaImage" width="250px" height="250px">
+    </div>
+</div>

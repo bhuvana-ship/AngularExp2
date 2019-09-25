@@ -1,0 +1,38 @@
+<div class="signup-container col-sm-12 w-100 h-100 d-flex justify-content-center align-items-center">
+    <div class="container1 h-50 w-50 bg-dark">
+        <form [formGroup]="signUpForm" class="h-100 w-100">
+            <div class="name-container">
+                <label for="">Name</label>
+                <input type="text" formControlName="name">
+            </div>
+            <div class="password-container">
+                <label for="">Password</label>
+                <input type="password" formControlName="password">
+            </div>
+            <div class="email-container">
+                <label for="">Email</label>
+                <input type="email" formControlName="email">
+            </div>
+            <div class="dob-container" formGroupName="dob">
+                <label for="">DOB</label>
+                <select [(ngModel)]="myDefaultValues[0]" formControlName="yearBind">
+                    <option value="Year" disabled>Year</option>
+                    <option [value]="YearData" *ngFor="let YearData of year">{{YearData}}</option>
+                </select>
+                <select [(ngModel)]="myDefaultValues[1]" formControlName="monthBind">
+                    <option value="Month" disabled>Month</option>
+                    <option [value]="MonthData" *ngFor="let MonthData of month">{{MonthData}}</option>
+                </select>
+                <select [(ngModel)]="myDefaultValues[2]" formControlName="dateBind">
+                    <option value="Date" disabled>Date</option>
+                    <option [value]="DayData" *ngFor="let DayData of dayDate">{{DayData}}</option>
+                </select>
+            </div>
+            <div class="comment-container">
+                <label for="">Comment</label>
+                <textarea id="comment" formControlName="comment">comment</textarea>
+            </div>
+            <button class="btn btn-danger" (click)="signupFormSubmit()">click</button>
+        </form>
+    </div>
+</div>
